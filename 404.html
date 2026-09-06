@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <link rel="canonical" href="https://www.aluxian.com/">
+    <title>Moved</title>
+  </head>
+  <body data-cozy-github-pages-redirect="1">
+    <p>This website moved to <a href="https://www.aluxian.com/">https://www.aluxian.com/</a>.</p>
+    <script>
+      (() => {
+        const target = "https://www.aluxian.com";
+        const prefix = "/aluxian.com";
+        let path = window.location.pathname;
+        if (path === prefix) {
+          path = "/";
+        } else if (prefix !== "/" && path.startsWith(prefix + "/")) {
+          path = path.slice(prefix.length);
+        }
+        // Concatenation with a fixed HTTPS origin prevents a path beginning with // from selecting another host.
+        window.location.replace(target + path + window.location.search + window.location.hash);
+      })();
+    </script>
+  </body>
+</html>
